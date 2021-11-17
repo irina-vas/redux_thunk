@@ -15,4 +15,10 @@
   border-radius: 10px;
   color: #fff;
   text-align: center;
+  line-height: 40px;
+}
+
+.user_name a {
+  text-decoration: none;
+  color: #fff;
 }

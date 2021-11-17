@@ -1,0 +1,20 @@
+.wrapper_posts {
+  margin-top: 20px;
+}
+
+.users_with_posts{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.post_title {
+  color: rgb(49, 43, 66);
+  font-weight: 600;
+  margin: 1vw;
+  padding: 2vw;
+  width: 20%;
+  border-radius: 5px;
+  box-shadow: 1px -1px 21px 0px rgba(14, 35, 51, 0.23);
+  text-decoration: none;
+}

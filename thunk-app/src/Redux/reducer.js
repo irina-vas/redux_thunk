@@ -4,7 +4,7 @@ import { ADD_USERS, ADD_POSTS } from "./constants";
 
 let data = {
   users: [],
-  // posts: [],
+  posts: [],
 };
 
 
@@ -14,14 +14,13 @@ export const reducer = (state = data, action) => {
 
     case ADD_USERS:
       return {
-        ...state, users: [...state.users, ...action.payload]
-
+        ...state, users: [...action.payload]
       }
 
-    // case ADD_POSTS:
-    //   return {
-
-    //   }
+    case ADD_POSTS:
+      return {
+        ...state, posts: [...action.payload]
+      }
 
     default:
       return state;

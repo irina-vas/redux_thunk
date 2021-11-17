@@ -1,4 +1,5 @@
 import { addUsers } from "./actions";
+import { addPosts } from "./actions";
 
 
 export const fetchUsers = () => {
@@ -6,6 +7,14 @@ export const fetchUsers = () => {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
       .then(json => dispatch(addUsers(json)))
+  }
+}
+
+export const fetchPosts = () => {
+  return dispatch => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then(json => dispatch(addPosts(json)))
   }
 }
 
