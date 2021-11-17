@@ -1,0 +1,24 @@
+.wrapper_users {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #92C7DA;
+}
+
+.user_name {
+  width: 300px;
+  margin: 20px;
+  height: 40px;
+  background-color: #578DB2;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+}
+
+.user_name a {
+  text-decoration: none;
+  color: #fff;
+}
