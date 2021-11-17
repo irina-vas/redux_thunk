@@ -1,14 +1,15 @@
 import React, {useEffect}  from 'react';
 import './Posts.css';
 import { fetchPosts, fetchUsers } from '../Redux/asyncAction';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
+import Loader from './ Loader/Loader';
 
 function Posts() {
   const dispatch = useDispatch();
   const posts = useSelector(state => state.posts);
   const users = useSelector(state => state.users);
+  const loading = useSelector(state => state.loading)
 
 
   useEffect(() => {
@@ -20,6 +21,11 @@ function Posts() {
     dispatch(fetchPosts());
   }, [dispatch]);
 
+  if (loading) {
+    return (
+      <div className="loader"><Loader /></div>
+    )
+  }
 
 
   let filteredById = users.map(i => {
@@ -40,9 +46,8 @@ function Posts() {
       <div className="users_with_posts">
       {filteredById.map((item, index) => {
         return (
-          <div  key={index}>
-           <Link to={`/posts/${item.id}`} className="post_title"><div>{item.name}</div></Link>
-           {/* <div>{i.userId}</div> */}
+          <div key={index} className="post_title">
+           <Link to={`/posts/${item.id}`}><div>{item.name}</div></Link>
           </div>
         )
       })}

@@ -1,7 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-
+import './PostOfUsers.css';
+import Posts from './Posts'
 
 function PostOfUser() {
   const dispatch = useDispatch();
@@ -17,10 +18,11 @@ function PostOfUser() {
 
   return (
     <div className="wrapper_user">
+      <Posts />
       {postResult.map(item => {
 
         return (
-          <div key={item.id} className="wrapper_card">
+          <div key={item.id} className="wrapper_post">
            {item.title}
           </div>
         )

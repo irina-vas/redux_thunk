@@ -6,6 +6,7 @@ import Users from './components/Users';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import User from './components/User';
 import PostOfUser from './components/PostOfUser';
+import Loader from './components/ Loader/Loader'
 
 
 
